@@ -14,7 +14,7 @@ namespace Quizes
                 new Question(){Text = "What does LOIC stand for ?, write the awnser with spaces inbetween the words", Answer = "Low Orbital Ion Canon", Difficulty = 2, Category = "Hacking" },
                 new Question(){Text = "What is the technical term for the smallest piece of grammatical unit in a language", Answer = "Morpheme", Difficulty = 3, Category = "Language" }
             };
-
+            
 
         }
     }

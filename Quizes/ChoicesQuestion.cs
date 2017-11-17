@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Quizes
 {
-    public class ChoiceQuestion : Question
+    public class ChoicesQuestion : Question
     {
 
     }

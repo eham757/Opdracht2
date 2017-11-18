@@ -50,12 +50,28 @@ namespace Quizes
 
             };
 
+            int score = 0;
 
             // Quiz GUI
             Console.WriteLine("Welcome to the quizmaster 9000 (name still pending)");
             Console.WriteLine("");
+            Console.WriteLine("How do you want your Questions sorted");
+            Console.WriteLine("Type in either category , difficulty or not");
+            string response = Console.ReadLine();
 
-            int score = 0;
+            
+           /* do
+            {
+                switch (response)
+                {
+                    case "category":
+                        var returnedSorted = questions.OrderBy(q => q.Category);
+                        break;
+                }
+
+            } while (response != "difficulty" || response != "category" || response != "not");
+            */
+
             //Quizing part of the quiz
             foreach (Question question in questions)
             {

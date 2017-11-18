@@ -28,7 +28,15 @@ namespace Quizes
         {
 
             int element = Int16.Parse(response)- 1;
-            return choices.ElementAt(element) == Answer;
+            if(element > choices.Count)
+            {
+                return false;
+            }
+            else
+            {
+                return choices.ElementAt(element) == Answer;
+            }
+            
         }
     }
 }

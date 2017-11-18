@@ -61,7 +61,9 @@ namespace Quizes
 
             //selecting questions
             IEnumerable<Question> selectedQuestions = null;
+            do
             {
+                
                 response = Console.ReadLine();
 
                 string responseSecond = null;
@@ -95,12 +97,13 @@ namespace Quizes
 
             } while (response != "difficulty" && response != "category" && response != "not") ;
 
-            Console.WriteLine("How do you want your Questions sorted");
-            Console.WriteLine("Type in either category , difficulty or not");
+            
             
 
             IEnumerable<Question> sortedQuestions = null;
+            do
             {
+               
                 response = Console.ReadLine();
                 switch (response)
                 {
@@ -122,8 +125,8 @@ namespace Quizes
                         break;
 
                     default:
-                        Console.WriteLine("I Did not get that please retype what kind of sorting you want");
-                        Console.WriteLine("Type in either category, difficulty or not");
+                        Console.WriteLine("How do you want your Questions sorted");
+                        Console.WriteLine("Type in either category , difficulty or not");
                         break;
                 }
 

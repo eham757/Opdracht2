@@ -99,7 +99,7 @@ namespace Quizes
             Console.WriteLine("Type in either category , difficulty or not");
             
 
-            IList<Question> sortedQuestions = null;
+            IEnumerable<Question> sortedQuestions = null;
             {
                 response = Console.ReadLine();
                 switch (response)
@@ -107,18 +107,18 @@ namespace Quizes
                     case "category":
                         Console.WriteLine("");
 
-                        var qs = questions.OrderBy(q => q.Category);
+                        var qs = selectedQuestions.OrderBy(q => q.Category);
                         sortedQuestions = qs.ToList();
                         break;
 
                     case "difficulty":
                         Console.WriteLine("");
-                        qs = questions.OrderBy(q => q.Difficulty);
+                        qs = selectedQuestions.OrderBy(q => q.Difficulty);
                         sortedQuestions = qs.ToList();
                         break;
 
                     case "not":
-                        sortedQuestions = questions;
+                        sortedQuestions = selectedQuestions;
                         break;
 
                     default:
@@ -131,7 +131,7 @@ namespace Quizes
 
 
             //Quizing part of the quiz
-            foreach (Question question in selectedQuestions)
+            foreach (Question question in sortedQuestions)
             {
                 if (Quizing(question))
                 {
@@ -143,7 +143,7 @@ namespace Quizes
 
             Console.WriteLine(String.Format("That was all, you had {0} / {1} correct ",score, selectedQuestions.Count()));
             Console.WriteLine("press any key to exit...");
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         //Quiz GUI code

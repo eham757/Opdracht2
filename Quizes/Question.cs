@@ -9,14 +9,14 @@ namespace Quizes
         public string Text { get; set; }
         public string Answer { get; set; }
 
-        public bool checkAnswer(string response)
+        public virtual bool checkAnswer(string response)
         {
             string responseLower = response.ToLower();
             string answerLower = Answer.ToLower();
             return responseLower == answerLower;
         }
 
-        public void display()
+        public virtual void display()
         {
             Console.WriteLine(Text);
         }
